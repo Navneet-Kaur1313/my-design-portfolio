@@ -23,4 +23,4 @@ Check out the live version here: [Visit Now](https://navneet-kaur1313.github.io/
 
 ## 📸 Banner Preview
 
-![Portfolio Banner](images/your-banner-image-name.png)
+![Portfolio Banner](https://github.com/Navneet-Kaur1313/my-design-portfolio/blob/main/portfolio_nav.png?raw=true)
