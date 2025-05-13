@@ -38,7 +38,19 @@ h6{
     margin: 0 auto;
     padding: 3.6rem 2.4rem;  
 }
-p,li,a{
+ /* .section-project .container:first-child{
+  padding:6.4rem 0 2.4rem 0;  
+
+} */ */
+.section-project .container:first-child{
+  padding:6.4rem 0 2.4rem 0;
+}
+/* .section-skill .container:first-child, */
+
+
+
+p,li,a,
+label{
     font-family: "Urbanist", sans-serif;
      font-size: 1.8rem;
      letter-spacing: 0.1rem;
@@ -255,6 +267,9 @@ main{
     fill: #FFFFFF;
 }
 
+.section-skill{
+  background-color: var(--supporting-color);
+}
 
 /*------------- HERO SECTION END--------------  */
 
@@ -322,7 +337,7 @@ main{
 /*-----------------START SKILL SECTION -------------- */
 .section-skill{
     padding:1.5rem 0.2rem;
-}
+} 
 .skill-div {
     transition: box-shadow 0.3s ease;
   }
@@ -376,6 +391,10 @@ main{
 /*-----------------END SKILL SECTION -------------- */
 
 /*-----------------START PROJECT SECTION -------------- */
+.section-project .container grid grid-three--cols
+{
+  margin-top: 5.2rem;
+}
 .project-div{
 
   margin-top:3.2rem;   
@@ -584,7 +603,240 @@ main{
   } */
 
 /* center part end*/
+/* Contact home start */
+.section-contact-homepage{
+  width:60%;
+  min-height: 30rem;
+  margin:0 auto;
+  height:30rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,  rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  margin-bottom: 5rem;
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  -moz-border-radius: .2rem;
+  -ms-border-radius: .2rem;
+  -o-border-radius: .2rem;
+  padding: 0 3.2rem;
+  position: relative;
+  bottom: -15rem;
+  z-index:1;
+  background-color: var(--white-color);
 
 
+  & .grid {
+    align-items: center;
+    gap: 6.4rem;
+  }
 
+ 
+}
+.section-contact-homepage .grid{
+  align-items: center;
+}
+ .contact-title{
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+.contact content p{
+  margin:1.2rem 0 2.4rem 0
+} 
+.section-contact-homepage img{
+  width:90%;
+  height:auto;
+}
+.section-contact-homepage a{
+  color:var(--white-color);
+  text-transform: capitalize;
+
+}
+.section-contact-homepage .btn{
+  margin-top: 2rem;
+}
+.section-contact-homepage .fa-solid{
+  padding:0;
+  color:var(--white-color);
+  background-color: var(--main-color);
+
+
+}
+/* Fix icon circle in contact button */
+/* .section-contact-homepage .fa-solid {
+  padding-left: 0.5rem;
+  background-color: transparent; /* Remove the circle background */
+  color: var(--main-color); /* Just use main theme color */
+/* } */ */
+/* Remove unwanted circle/white fill from button icons */
+.btn i,
+.section-contact-homepage i {
+  background: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: inherit;
+  font-size: inherit;
+}
+.section-contact-homepage .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #007bff; /* your blue */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section-contact-homepage .btn i {
+  margin-left: 0.5rem;
+  background: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+/* Contact home end */
+
+
+/* ACTUAL CONTATC PAGE SECTION START */
+
+.mb-3
+{
+margin-bottom: 3.2rem;
+}
+label{
+  display: block;
+  text-transform: capitalize;
+}
+input, textarea{
+  width: 100%;
+  padding:1.4rem 2.4rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+}
+.contact-content .grid{
+  gap:6.4rem;
+}
+/* pseudo element-direct access(placeholder) */
+::placeholder{
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+.btn-submit
+{
+  font-size: 1.8rem;
+  border: none;
+}
+ :is(.section-about, .section-certificate, .section-project,
+  .section-skill,.section-hero) .container:first-child{
+    padding: 6.4rem 0 2.4rem 0;
+  }
+  .section-contact .grid{
+    gap:6.4rem;
+    align-items: center;
+  }
+  
+/* ACTUAL CONTATC PAGE SECTION ENDS */
+
+
+/* START FOOTER SECTION */
+footer {
+  background-color: var(--footer-bg-color);
+  padding: 6rem 2rem;
+}
+
+footer * {
+  color: var(--white-color);
+}
+
+footer .grid {
+  text-align: left;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.footer-subheading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 0.6rem;
+}
+
+footer a {
+  color: var(--white-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--supporting-color);
+}
+
+/* Social Icons Styling */
+.social-footer--icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.social-footer--icons i {
+  font-size: 1.8rem;
+  transition: transform 0.3s;
+}
+
+.social-footer--icons i:hover {
+  transform: rotate(360deg);
+  color: var(--supporting-color);
+}
+/* END FOOTER SECTION */
 /*-----------------END PROJECT SECTION -------------- */
+/* Here we can add anything as we wanna do 
+hey....what you wanna do  */
+/* CERTIFICATE SECTION START */
+.section-certificate
+{
+  background-color: var(--bg-color);
+  & .grid{
+    gap:6.4rem;
+
+  }
+ & .certificate{
+  box-shadow: var(--btn-box-shadow);
+  transition: scale 0.3s linear;
+  
+  -webkit-transition: scale 0.3s linear;
+  -moz-transition: scale 0.3s linear;
+  -ms-transition: scale 0.3s linear;
+  -o-transition: scale 0.3s linear;
+ &:hover{
+  scale:1.27;
+ }
+
+  & .certificate-content{
+padding:1.4rem 2.4rem 2.4rem;
+  }
+  
+ }
+& img{
+  width:100%;
+  height:auto;
+}
+ & .certificate-date {
+  display:flex;
+  justify-content:space-between;
+margin-top: 1.6rem;
+font-size: 1.4rem;
+}
+& .fa-solid{
+  background-color: transparent;
+  padding: 0;
+}
+}
+
+/* CERTIFICATE SECTION END */
