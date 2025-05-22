@@ -38,15 +38,18 @@ h6{
     margin: 0 auto;
     padding: 3.6rem 2.4rem;  
 }
- /* .section-project .container:first-child{
-  padding:6.4rem 0 2.4rem 0;  
-
-} */ */
-.section-project .container:first-child{
-  padding:6.4rem 0 2.4rem 0;
+:is(
+  .section-about,
+  .section-certificate,
+  .section-contact,
+  .section-project,
+  .section-hero
+) .container {
+  padding: 6.4rem 2.4rem 2.4rem 2.4rem;
 }
-/* .section-skill .container:first-child, */
 
+/* .section-skill .container:first-child, */
+ 
 
 
 p,li,a,
@@ -149,7 +152,7 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 0;
+    padding: 1.8rem 2.4rem;
 }
 .section-navbar .navbar ul{
     display: flex;
@@ -604,7 +607,91 @@ main{
 
 /* center part end*/
 /* Contact home start */
-.section-contact-homepage{
+/* Contact home start */
+.section-contact-homepage {
+  width: 60%;
+  min-height: 30rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  border-radius: 0.2rem;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 10;
+  background-color: var(--white-color);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+              rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  overflow: hidden;
+}
+
+.section-contact-homepage .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+.contact-content p {
+  margin: 1.2rem 0 2.4rem 0;
+}
+
+.section-contact-homepage .contact-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.section-contact-homepage .contact-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.section-contact-homepage a {
+  color: var(--white-color);
+  text-transform: capitalize;
+}
+
+.section-contact-homepage .btn {
+  margin-top: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section-contact-homepage .btn i {
+  margin-left: 0.5rem;
+  background: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: inherit;
+  font-size: inherit;
+}
+
+.section-contact-homepage i {
+  background: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: inherit;
+  font-size: inherit;
+}
+
+
+/* Contact home end */
+
+/* .section-contact-homepage{
   width:60%;
   min-height: 30rem;
   margin:0 auto;
@@ -648,8 +735,15 @@ main{
   color:var(--white-color);
   text-transform: capitalize;
 
-}
-.section-contact-homepage .btn{
+} */
+
+
+/* .contact-image {
+  width: 100%;
+  overflow: hidden;
+} */
+
+/* .section-contact-homepage .btn{
   margin-top: 2rem;
 }
 .section-contact-homepage .fa-solid{
@@ -658,15 +752,15 @@ main{
   background-color: var(--main-color);
 
 
-}
+} */
 /* Fix icon circle in contact button */
 /* .section-contact-homepage .fa-solid {
   padding-left: 0.5rem;
   background-color: transparent; /* Remove the circle background */
-  color: var(--main-color); /* Just use main theme color */
+  color: var(--main-color); Just use main theme color
 /* } */ */
 /* Remove unwanted circle/white fill from button icons */
-.btn i,
+/* .btn i,
 .section-contact-homepage i {
   background: none !important;
   border-radius: 0 !important;
@@ -679,7 +773,7 @@ main{
   align-items: center;
   gap: 0.5rem;
   background-color: #007bff; /* your blue */
-  color: white;
+  /* color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -691,7 +785,7 @@ main{
   background: none !important;
   border-radius: 0 !important;
   padding: 0 !important;
-}
+} */ */
 /* Contact home end */
 
 
@@ -718,6 +812,11 @@ input, textarea{
 ::placeholder{
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
+}
+/* to show focus on box typing */
+input:focus-visible, 
+textarea:focus-visible{
+  outline:0.1 rem solid red;
 }
 
 .btn-submit
@@ -840,3 +939,239 @@ font-size: 1.4rem;
 }
 
 /* CERTIFICATE SECTION END */
+/***** scrollbar Section *****/
+
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--supporting-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--heading-color);
+}
+
+/***** End scrollbar Section *****/
+
+/* MEDIA SECTION QUESRIES START */
+/* iska mtlb hai width- 1380 se kam ho to aaisa kro */
+@media (max-width:1400px)   
+{
+  html{
+    font-size: 56.2%;
+  }
+}
+
+.section-hero img{
+  width:90%;
+}
+.custom-shape-divider-bottom-1744674796 svg{
+  height: 120px;
+}
+
+@media (max-width:1200px)   
+{
+  html{
+    font-size: 54.2%;
+  }
+}
+@media(max-width:1100px)
+{
+  @media (max-width: 768px) {
+  &:hover {
+    transform: none !important;
+  }
+}
+
+  .section-certificate .container{
+     grid-template-columns: 1fr; 
+  }
+  
+
+ .section-skill .grid-four--cols
+  {
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  }
+  footer .grid-four--cols
+  {
+    grid-template-columns: repeat(3,minmax(100px,1fr)) ;
+    text-align: left;
+
+    & .footer-1--div
+    {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+      margin-top: 6.4rem;
+
+    }
+  }
+  .section-project {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  
+
+  .choose-left--div {
+    order: 3;
+  }
+
+  .choose-right--div {
+    order: 2;
+  }
+    .choose-center--div
+    {
+      order:-1;
+      & figure::before
+      {
+width:0;
+height:0;
+background-color: transparent;
+padding: 0;
+      }
+      & figure::after
+      {
+        width:0;
+height:0;
+background-color: transparent;
+padding: 0;
+      }
+      }
+    }
+    
+
+    
+  
+
+@media (max-width: 980px) {
+  .section-hero {
+    height: auto;
+    padding-bottom:5rem;
+  }
+
+  .grid-two--cols {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .section-hero--content {
+    order: 2;
+  }
+
+  .section-hero--image {
+    order: 1;
+  }
+
+  .section-hero--image img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+.section-about .about-div
+ {
+  text-align: left;
+ }
+}
+ @media(max-width:768px)
+ {
+ 
+  .grid-two--cols,
+  .grid-three--cols
+  {
+    grid-template-columns: 1fr ;
+  }
+  .section-navbar
+  {
+    display:flex;
+    flex-direction: column;
+  }
+  .section-navbar .navbar ul{
+    gap: 2.4em;
+
+  };
+  .section-project .section-common-subheading
+  {
+    font-size:xx-large;
+  }
+  .section-navbar .navbar-brand
+  {
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+  
+  .section-hero .grid .hero-heading
+  {
+    font-size: 3.8rem;
+  }
+  .section-contact-homepage {
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+
+  .section-contact-homepage .grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+  .section-project, .container {
+    padding-left: 10 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+
+  .section-contact-homepage .contact-image img {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .section-project
+  {
+    & .container {
+      
+      width: 30%;
+    }
+  }
+}
+  .project-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0 !important;
+  }
+    @media (max-width: 980px) {
+  .project-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    text-align: left !important;
+
+    * {
+      text-align: left !important;
+    }
+  }
+}
+
+    
+  
+  
+ 
+ 
+
+ 
+ 
+
+
+/* MEDIA SECTION QUESRIES  END */
